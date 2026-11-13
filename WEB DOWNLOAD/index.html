@@ -135,6 +135,111 @@ main,footer{
   position:relative;
   z-index:1;
 }
+/* PREMIUM 3D COVERFLOW */
+.app-showcase{
+  position:relative;
+  width:100%;
+  height:430px;
+  margin:35px 0 45px;
+  perspective:1200px;
+  overflow:hidden;
+  touch-action:pan-y;
+}
+
+.coverflow{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+}
+
+.cover-item{
+  position:absolute;
+  width:210px;
+  aspect-ratio:9/16;
+  left:50%;
+  top:50%;
+  overflow:hidden;
+  border-radius:19px;
+  border:1px solid rgba(255,255,255,.14);
+  background:#101010;
+  box-shadow:0 20px 55px rgba(0,0,0,.55);
+  transform:translate(-50%,-50%);
+  transition:
+    transform .55s cubic-bezier(.2,.8,.2,1),
+    opacity .4s ease,
+    filter .4s ease;
+  will-change:transform;
+}
+
+.cover-item img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.cover-item.active{
+  border-color:rgba(229,9,20,.65);
+  box-shadow:0 25px 65px rgba(229,9,20,.16);
+}
+
+.carousel-controls{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+
+.carousel-controls button{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#111;
+  color:white;
+  font-size:23px;
+  cursor:pointer;
+}
+
+.carousel-dots{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.carousel-dots span{
+  width:6px;
+  height:6px;
+  border-radius:20px;
+  background:rgba(255,255,255,.25);
+  transition:all .3s;
+}
+
+.carousel-dots span.active{
+  width:22px;
+  background:var(--ac);
+}
+
+@media(max-width:640px){
+  .app-showcase{
+    height:370px;
+    perspective:900px;
+  }
+
+  .cover-item{
+    width:175px;
+    border-radius:16px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .cover-item{transition:none}
+}
 </style>
 
 </head>  
@@ -166,6 +271,43 @@ main,footer{
   <small>FITUR UNGGULAN</small>
   <h2>Satu aplikasi, jutaan cerita untuk dijelajahi</h2>
   <p>Temukan hiburan favoritmu dengan lebih mudah. Dari film blockbuster hingga anime terbaru, semua dirancang untuk memberikan pengalaman menonton yang praktis dan menyenangkan.</p>
+</div>
+<div class="app-showcase">
+  <div class="coverflow" id="appCarousel">
+
+    <div class="cover-item active">
+      <img src="/assets/rapip-1.jpg" alt="RapipMovies Home" loading="lazy">
+    </div>
+
+    <div class="cover-item">
+      <img src="/assets/rapip-2.jpg" alt="RapipMovies Movies" loading="lazy">
+    </div>
+
+    <div class="cover-item">
+      <img src="/assets/rapip-3.jpg" alt="RapipMovies Anime" loading="lazy">
+    </div>
+
+    <div class="cover-item">
+      <img src="/assets/rapip-4.jpg" alt="RapipMovies Detail" loading="lazy">
+    </div>
+
+    <div class="cover-item">
+      <img src="/assets/rapip-5.jpg" alt="RapipMovies Player" loading="lazy">
+    </div>
+
+  </div>
+
+  <div class="carousel-controls">
+    <button type="button" id="coverPrev" aria-label="Sebelumnya">‹</button>
+    <div class="carousel-dots" id="carouselDots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button type="button" id="coverNext" aria-label="Selanjutnya">›</button>
+  </div>
 </div>
 <div class="grid">
   <article class="card rv">
@@ -286,6 +428,83 @@ main,footer{
     </div>  
   </section>  
 </main>  <footer><div class="wrap">Dibuat dengan ❤ oleh RapipMovies · © 2026 · Official Website</div></footer>  <script>  
+/* 3D COVERFLOW CAROUSEL */
+(function(){
+  const carousel = document.getElementById("appCarousel");
+  if(!carousel) return;
+
+  const items = Array.from(carousel.querySelectorAll(".cover-item"));
+  const dots = document.querySelectorAll("#carouselDots span");
+  const prev = document.getElementById("coverPrev");
+  const next = document.getElementById("coverNext");
+
+  if(!items.length) return;
+
+  let active = 0;
+  let startX = 0;
+  let dragging = false;
+
+  function render(){
+    const total = items.length;
+
+    items.forEach((item,i)=>{
+      let offset = i-active;
+
+      if(offset > total/2) offset -= total;
+      if(offset < -total/2) offset += total;
+
+      const abs = Math.abs(offset);
+      const x = offset * 125;
+      const rotate = offset * -28;
+      const scale = Math.max(.68,1-abs*.13);
+      const opacity = abs > 2 ? 0 : 1-abs*.22;
+
+      item.style.transform =
+        `translate(-50%,-50%) translateX(${x}px) rotateY(${rotate}deg) scale(${scale})`;
+
+      item.style.opacity = opacity;
+      item.style.zIndex = 10-abs;
+      item.style.filter = abs > 0 ? "brightness(.65)" : "brightness(1)";
+      item.style.pointerEvents = abs > 1 ? "none" : "auto";
+
+      item.classList.toggle("active",offset===0);
+    });
+
+    dots.forEach((dot,i)=>{
+      dot.classList.toggle("active",i===active);
+    });
+  }
+
+  function goTo(index){
+    active = (index+items.length)%items.length;
+    render();
+  }
+
+  prev.addEventListener("click",()=>goTo(active-1));
+  next.addEventListener("click",()=>goTo(active+1));
+
+  items.forEach((item,i)=>{
+    item.addEventListener("click",()=>goTo(i));
+  });
+
+  carousel.addEventListener("pointerdown",e=>{
+    startX = e.clientX;
+    dragging = true;
+  });
+
+  window.addEventListener("pointerup",e=>{
+    if(!dragging) return;
+    const distance = e.clientX-startX;
+
+    if(Math.abs(distance)>35){
+      goTo(active+(distance<0?1:-1));
+    }
+
+    dragging = false;
+  });
+
+  render();
+})();
 /* PREMIUM INTERACTIVE METEOR PARTICLES */
 (function(){
   const canvas = document.getElementById("meteor-bg");
