@@ -1,46 +1,46 @@
-<!DOCTYPE html>  <html lang="id">  
-<head>  
-<meta charset="utf-8">  
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">  
-<title>RapipMovies Official Website</title>  
-<meta name="description" content="Official website RapipMovies. Download the latest version of RapipMovies for Android.">  
-<meta name="theme-color" content="#E50914">  
-<meta property="og:type" content="website">  
-<meta property="og:site_name" content="RapipMovies">  
-<meta property="og:title" content="RapipMovies — Official Website">  
-<meta property="og:description" content="Official website RapipMovies. Download the latest version of RapipMovies for Android.">  
-<meta name="twitter:card" content="summary">  
-<meta name="twitter:title" content="RapipMovies — Official Website">  
-<meta name="twitter:description" content="Official website RapipMovies. Download the latest version of RapipMovies for Android.">  
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23d9323f'/%3E%3Cpath d='M12 9l11 7-11 7z' fill='%23fff'/%3E%3C/svg%3E">  
-<link rel="preconnect" href="https://fonts.googleapis.com">  
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">  
-<style>  
-:root{--bg:#000;--card:#080808;--ac:#E50914;--ac2:#F6121D;--tx:#eceef2;--tx2:#9aa3b2;--line:rgba(255,255,255,.09);color-scheme:dark}  
-*{box-sizing:border-box;margin:0}  
-html{scroll-behavior:smooth;scroll-padding-top:72px}  
-body{background:radial-gradient(900px 500px at -10% 30%,rgba(20,40,80,.35),transparent),var(--bg);  
-  color:var(--tx);font:400 15px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;  
-  padding-bottom:env(safe-area-inset-bottom,0)}  
-a{color:inherit;text-decoration:none}  
-:focus-visible{outline:2px solid var(--ac2);outline-offset:3px;border-radius:8px}  
-.wrap{width:min(1080px,100% - 40px);margin:0 auto}  /* loading */
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RapipMovies Official Website</title>
+<meta name="description" content="Official website RapipMovies. Download the latest version of RapipMovies for Android.">
+<meta name="theme-color" content="#E50914">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RapipMovies">
+<meta property="og:title" content="RapipMovies — Official Website">
+<meta property="og:description" content="Official website RapipMovies. Download the latest version of RapipMovies for Android.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RapipMovies — Official Website">
+<meta name="twitter:description" content="Official website RapipMovies. Download the latest version of RapipMovies for Android.">
+<link rel="icon" type="image/png" href="https://files.catbox.moe/36nybt.png">
+<link rel="apple-touch-icon" href="https://files.catbox.moe/36nybt.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--card:#080808;--ac:#E50914;--ac2:#F6121D;--tx:#eceef2;--tx2:#9aa3b2;--line:rgba(255,255,255,.09);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-tap-highlight-color:transparent}
+body{background:radial-gradient(900px 500px at -10% 30%,rgba(20,40,80,.35),transparent),var(--bg);color:var(--tx);font:400 15px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ac2);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1080px,100% - 40px);margin:0 auto}
+
+/* loading */
 #ld{position:fixed;inset:0;z-index:50;background:#000;display:grid;place-content:center;justify-items:center;gap:14px;transition:opacity .5s ease,visibility .5s}
 #ld.off{opacity:0;visibility:hidden}
 #ld p{font:700 13px Manrope;color:var(--tx2);letter-spacing:.04em}
-#ld svg{width:54px;height:54px;animation:pulse 1.1s ease-in-out infinite}
+#ld img{width:64px;height:64px;object-fit:contain;animation:pulse 1.1s ease-in-out infinite}
 @keyframes pulse{50%{transform:scale(.88);opacity:.7}}
 
 /* navbar */
 header{position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top,0);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 header.sc{background:rgba(8,8,8,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
 .nv{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font:800 22px Outfit,sans-serif;letter-spacing:-.01em}
+.logo{display:flex;align-items:center;gap:10px;font:800 22px Outfit,sans-serif;letter-spacing:-.01em}
+.logo img{width:38px;height:38px;object-fit:contain;display:block;flex-shrink:0}
 .logo b{color:var(--ac2)}
-.lk{display:flex;gap:26px;font:600 14px Manrope,sans-serif;color:var(--tx2)}
-.lk a{transition:color .2s}.lk a:hover{color:#fff}
-@media(max-width:640px){.lk a:not(.web){display:none}}
 
 /* hero */
 .hero{padding:44px 0 56px;display:grid;gap:40px;align-items:center}
@@ -51,14 +51,11 @@ h1{font:800 clamp(34px,7.2vw,60px)/1.05 Outfit,sans-serif;letter-spacing:-.02em;
 h1 em{font:700 1em/1 Fraunces,serif;font-style:normal;color:var(--ac2)}
 .lead{max-width:520px;color:var(--tx2);font-size:16.5px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 16px}
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 26px;border-radius:14px;
-font:800 16px Manrope,sans-serif;cursor:pointer;border:1px solid var(--line);color:#fff;background:rgba(255,255,255,.05);
-transition:transform .18s ease,box-shadow .25s,background .25s;-webkit-tap-highlight-color:transparent}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 26px;border-radius:14px;font:800 16px Manrope,sans-serif;cursor:pointer;border:1px solid var(--line);color:#fff;background:rgba(255,255,255,.05);transition:box-shadow .25s,background .25s}
 .btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .btn:hover{background:rgba(255,255,255,.09)}
-.btn:active{transform:scale(.97)}
 .btn.pri{border:0;background:linear-gradient(180deg,var(--ac2),var(--ac));box-shadow:0 10px 30px rgba(229,9,20,.35)}
-.btn.pri:hover{box-shadow:0 12px 38px rgba(229,9,20,.5);transform:translateY(-1px)}
+.btn.pri:hover{box-shadow:0 12px 38px rgba(229,9,20,.5)}
 .btn[aria-disabled=true]{opacity:.5;pointer-events:none;box-shadow:none}
 .btn .sp{display:none;width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
 .btn.busy .sp{display:block}.btn.busy .ic{display:none}
@@ -68,12 +65,40 @@ transition:transform .18s ease,box-shadow .25s,background .25s;-webkit-tap-highl
 #st{min-height:20px;margin:8px 0 18px;font:600 13px Manrope;color:var(--tx2)}
 #st.err{color:#ff6b75}
 
-.vis{position:relative;aspect-ratio:1;max-width:380px;width:100%;margin:0 auto;display:grid;place-items:center}
-
-.vis .mark{position:relative;width:46%;aspect-ratio:1;border-radius:26%;background:transparent;display:grid;place-items:center;box-shadow:0 24px 60px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.12)}
-.vis .mark svg{width:46%;margin-left:6%;fill:#fff}
-.vis .ring{position:absolute;inset:0;border:1px solid var(--line);border-radius:50%}
-.vis .ring.r2{inset:12%}
+/* ===== LOGO INTRO ===== */
+.vis{width:100%;max-width:340px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;user-select:none;-webkit-user-select:none}
+.stage{position:relative;aspect-ratio:1;width:100%;display:grid;place-items:center}
+.glow{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(229,9,20,.55),rgba(229,9,20,.12) 55%,transparent 70%);filter:blur(18px);opacity:0}
+.vis.go .glow{opacity:1;animation:glowIn 1.2s ease .2s backwards,breathe 3.2s ease-in-out 1.4s infinite}
+@keyframes glowIn{from{opacity:0;scale:.3}}
+@keyframes breathe{50%{opacity:.6;scale:.9}}
+.ring{position:absolute;inset:0;border:1px solid rgba(255,255,255,.16);border-radius:50%;scale:0;opacity:0}
+.ring.r2{inset:14%;border-color:rgba(229,9,20,.45)}
+.ring.r3{inset:5%;border:1px dashed rgba(255,255,255,.2)}
+.vis.go .ring{scale:1;opacity:1;animation:ringIn 1s cubic-bezier(.34,1.56,.64,1) backwards}
+.vis.go .r2{animation-delay:.2s}
+.vis.go .r3{animation:ringIn 1s cubic-bezier(.34,1.56,.64,1) .4s backwards,rot 16s linear 1.4s infinite}
+@keyframes ringIn{from{scale:0;opacity:0}}
+@keyframes rot{to{rotate:360deg}}
+.orb{position:absolute;inset:0;opacity:0}
+.orb.o2{inset:14%}
+.orb i{position:absolute;top:-4px;left:50%;width:9px;height:9px;margin-left:-4px;border-radius:50%;background:var(--ac2);box-shadow:0 0 14px 2px var(--ac2)}
+.orb.o2 i{width:6px;height:6px;background:#fff;box-shadow:0 0 12px #fff}
+.vis.go .orb{opacity:1;transition:opacity .5s 1s;animation:spin 6s linear infinite}
+.vis.go .orb.o2{animation:spin 9s linear infinite reverse}
+.mark{position:relative;width:44%;aspect-ratio:1;border-radius:26%;display:grid;place-items:center;box-shadow:0 24px 60px rgba(0,0,0,.6),0 0 40px rgba(229,9,20,.35),inset 0 0 0 1px rgba(255,255,255,.14);scale:0;opacity:0}
+.mark img{width:80%;height:80%;object-fit:contain;display:block;pointer-events:none}
+.vis.go .mark{scale:1;opacity:1;animation:markIn 1.1s cubic-bezier(.34,1.56,.64,1) .35s backwards,float 4s ease-in-out 1.6s infinite}
+@keyframes markIn{from{scale:0;rotate:-60deg;opacity:0}60%{opacity:1}}
+@keyframes float{50%{translate:0 -9px}}
+.vt{font:800 clamp(28px,8.5vw,36px)/1.1 Outfit,sans-serif;letter-spacing:-.02em;white-space:nowrap;min-height:40px}
+.vt span{display:inline-block;opacity:0}
+.vt .m{color:var(--ac2)}
+.vt .x{color:#fff}
+.vis.go .vt span{opacity:1;animation:letter .75s cubic-bezier(.34,1.8,.5,1) calc(.9s + var(--i)*.06s) backwards}
+.vis.go .vt .x{animation:letter .75s cubic-bezier(.34,1.8,.5,1) calc(.9s + var(--i)*.06s) backwards,wiggle 2.4s ease-in-out 2.4s infinite}
+@keyframes letter{from{opacity:0;translate:0 30px;scale:.3;rotate:-12deg}}
+@keyframes wiggle{0%,100%{rotate:0deg}10%{rotate:-14deg;scale:1.15}20%{rotate:10deg}30%{rotate:0deg;scale:1}}
 
 section{padding:56px 0}
 .sh{margin-bottom:28px}
@@ -81,9 +106,13 @@ section{padding:56px 0}
 .sh h2{font:800 clamp(26px,5vw,38px)/1.15 Outfit,sans-serif;letter-spacing:-.015em;margin-top:6px}
 .sh p{color:var(--tx2);margin-top:8px;max-width:560px}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--card);transition:transform .25s ease,border-color .25s}
-.card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.2)}
-.card .ic{width:42px;height:42px;border-radius:12px;background:rgba(229,9,20,.14);display:grid;place-items:center;margin-bottom:14px}
+.card{border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden;transition:border-color .25s}
+.card:hover{border-color:rgba(255,255,255,.2)}
+.cimg{position:relative;aspect-ratio:16/10;overflow:hidden;background:radial-gradient(120% 90% at 20% 0%,rgba(229,9,20,.4),transparent 60%),linear-gradient(135deg,#1a0407,#0a0a14)}
+.cimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.cimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--card));pointer-events:none}
+.cb{padding:0 22px 22px}
+.card .ic{position:relative;z-index:1;width:42px;height:42px;border-radius:12px;background:#1b0609;border:1px solid rgba(229,9,20,.35);display:grid;place-items:center;margin:-21px 0 12px}
 .card .ic svg{width:21px;height:21px;fill:none;stroke:var(--ac2);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .card h3{font:800 16.5px Manrope;margin-bottom:6px}
 .card p{color:var(--tx2);font-size:14px}
@@ -110,163 +139,69 @@ footer{padding:36px 0 44px;border-top:1px solid var(--line);color:var(--tx2);fon
 
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}
 .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
-.vis .mark img{
-  width:80%;
-  height:80%;
-  object-fit:contain;
-  display:block;
-}
-/* PREMIUM METEOR BACKGROUND */
-#meteor-bg{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:0;
-  pointer-events:none;
-}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}.vis *{opacity:1!important;scale:1!important}}
 
-header{
-  z-index:20;
-}
+#meteor-bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+header{z-index:20}
+main,footer{position:relative;z-index:1}
 
-main,footer{
-  position:relative;
-  z-index:1;
-}
-/* PREMIUM 3D COVERFLOW */
-.app-showcase{
-  position:relative;
-  width:100%;
-  height:430px;
-  margin:35px 0 45px;
-  perspective:1200px;
-  overflow:hidden;
-  touch-action:pan-y;
-}
-
-.coverflow{
-  position:relative;
-  width:100%;
-  height:100%;
-  transform-style:preserve-3d;
-}
-
-.cover-item{
-  position:absolute;
-  width:210px;
-  aspect-ratio:9/16;
-  left:50%;
-  top:50%;
-  overflow:hidden;
-  border-radius:19px;
-  border:1px solid rgba(255,255,255,.14);
-  background:#101010;
-  box-shadow:0 20px 55px rgba(0,0,0,.55);
-  transform:translate(-50%,-50%);
-  transition:
-    transform .55s cubic-bezier(.2,.8,.2,1),
-    opacity .4s ease,
-    filter .4s ease;
-  will-change:transform;
-}
-
-.cover-item img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-}
-
-.cover-item.active{
-  border-color:rgba(229,9,20,.65);
-  box-shadow:0 25px 65px rgba(229,9,20,.16);
-}
-
-.carousel-controls{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:20px;
-}
-
-.carousel-controls button{
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  border:1px solid var(--line);
-  background:#111;
-  color:white;
-  font-size:23px;
-  cursor:pointer;
-}
-
-.carousel-dots{
-  display:flex;
-  align-items:center;
-  gap:7px;
-}
-
-.carousel-dots span{
-  width:6px;
-  height:6px;
-  border-radius:20px;
-  background:rgba(255,255,255,.25);
-  transition:all .3s;
-}
-
-.carousel-dots span.active{
-  width:22px;
-  background:var(--ac);
-}
-
-@media(max-width:640px){
-  .app-showcase{
-    height:370px;
-    perspective:900px;
-  }
-
-  .cover-item{
-    width:175px;
-    border-radius:16px;
-  }
-}
-
-@media(prefers-reduced-motion:reduce){
-  .cover-item{transition:none}
-}
+/* ===== 3D COVERFLOW ===== */
+.app-showcase{position:relative;width:100%;height:440px;margin:35px 0 45px;perspective:1100px;overflow:hidden;touch-action:pan-y;border-radius:28px;user-select:none;-webkit-user-select:none;
+  background:radial-gradient(55% 50% at 50% 48%,rgba(229,9,20,.34),transparent 72%),linear-gradient(180deg,transparent 55%,rgba(229,9,20,.14) 100%)}
+.app-showcase::before{content:"";position:absolute;left:10%;right:10%;bottom:46px;height:60px;background:radial-gradient(ellipse at center,rgba(229,9,20,.45),transparent 70%);filter:blur(14px);pointer-events:none}
+.coverflow{position:relative;width:100%;height:100%;transform-style:preserve-3d;cursor:grab}
+.coverflow:active{cursor:grabbing}
+.cover-item{position:absolute;width:210px;aspect-ratio:9/16;left:50%;top:48%;overflow:hidden;border-radius:19px;border:1px solid rgba(255,255,255,.14);background:#101010;box-shadow:0 20px 55px rgba(0,0,0,.55);transform:translate(-50%,-50%);will-change:transform,opacity;backface-visibility:hidden}
+.cover-item img{width:100%;height:100%;display:block;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.cover-item::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(0,0,0,var(--d,0));pointer-events:none}
+.cover-item::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(229,9,20,0) 55%,rgba(229,9,20,.4));pointer-events:none}
+.cover-item.active{border-color:rgba(229,9,20,.7);box-shadow:0 25px 65px rgba(229,9,20,.28)}
+.carousel-controls{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:20px;z-index:200}
+.carousel-controls button{width:36px;height:36px;border-radius:50%;border:1px solid rgba(229,9,20,.4);background:rgba(20,4,6,.8);color:#fff;font-size:23px;line-height:1;cursor:pointer}
+.carousel-dots{display:flex;align-items:center;gap:7px}
+.carousel-dots span{width:6px;height:6px;border-radius:20px;background:rgba(255,255,255,.25);transition:width .35s cubic-bezier(.34,1.56,.64,1),background .3s}
+.carousel-dots span.active{width:22px;background:var(--ac)}
+@media(max-width:640px){.app-showcase{height:390px;perspective:900px}.cover-item{width:168px;border-radius:16px}}
 </style>
-
-</head>  
-<body>  
+</head>
+<body>
 <canvas id="meteor-bg" aria-hidden="true"></canvas>
-<div id="ld" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#d9323f"/><path d="M12 9l11 7-11 7z" fill="#fff"/></svg><p>Menyiapkan RapipMovies…</p></div>  <header id="hd"><div class="wrap nv">  
-  <a class="logo" href="/download.html" aria-label="RapipMovies">Rapip<b>Movies</b></a>  
-  <nav class="lk" aria-label="Utama"><a href="#fitur">Fitur</a><a href="#instal">Instalasi</a><a href="#update">Pembaruan</a><a href="#download">Download</a><a href="#faq">FAQ</a></nav>  
-</div></header>  <main class="wrap">  
-  <div class="hero">  
-    <div>  
-      <span class="tag"><i></i>Official website · Android</span>  
-      <h1>RapipMovies nonton film &amp; anime di <em>Android</em>.</h1>  
-      <div class="cta">  
-        <a class="btn pri" id="dl" href="/downloads/RapipMovies.apk" download="RapipMovies.apk" rel="noopener">  
-          <svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span class="sp"></span><span id="dlt">Download RapipMovies</span>  
-        </a>  
+<div id="ld" aria-hidden="true">
+  <img src="https://files.catbox.moe/36nybt.png" alt="">
+  <p>Welcome!!</p>
+</div>
+<header id="hd"><div class="wrap nv">
+  <a class="logo" href="/download.html" aria-label="RapipMovies">
+    <img src="https://files.catbox.moe/36nybt.png" alt="RapipMovies">
+    <span>Rapip<b>Movies</b></span>
+  </a>
+  <nav class="lk" aria-label="Utama"><a href="#fitur">Fitur</a><a href="#instal">Instalasi</a><a href="#update">Pembaruan</a><a href="#download">Download</a><a href="#faq">FAQ</a></nav>
+</div></header>
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <span class="tag"><i></i>Official website · Android</span>
+      <h1>RapipMovies nonton film &amp; anime di <em>Android</em>.</h1>
+      <div class="cta">
+        <a class="btn pri" id="dl" href="/downloads/RapipMovies.apk" download="RapipMovies.apk" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span class="sp"></span><span id="dlt">Download RapipMovies</span>
+        </a>
+      </div>
+      <div class="meta"><span>Platform <b id="mPl">Android</b></span><span>Versi <b id="mVer">1.0.0</b></span><span>Ukuran <b id="mSz">—</b></span></div>
+      <div id="st" role="status" aria-live="polite"></div>
+      <p class="lead">Nikmati dunia hiburan tanpa batas bersama RapipMovies! Temukan ribuan pilihan film dan anime favorit dengan koleksi yang terus diperbarui, kualitas tontonan yang nyaman, serta pengalaman streaming praktis langsung dari genggamanmu. Semua hiburan favoritmu, kini dalam satu aplikasi Android!</p>
+    </div>
+    <div class="vis" id="vis" aria-label="RapipMovies">
+      <div class="stage">
+        <span class="glow"></span><span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
+        <span class="orb"><i></i></span><span class="orb o2"><i></i></span>
+        <div class="mark"><img src="https://files.catbox.moe/36nybt.png" alt="RapipMovies"></div>
+      </div>
+      <div class="vt" id="vt" aria-hidden="true"></div>
+    </div>
+  </div>
 
-      </div>  
-      <div class="meta"><span>Platform <b id="mPl">Android</b></span><span>Versi <b id="mVer">1.0.0</b></span><span>Ukuran <b id="mSz">—</b></span></div>  
-      <div id="st" role="status" aria-live="polite"></div>  
-      <p class="lead">Nikmati dunia hiburan tanpa batas bersama RapipMovies! Temukan ribuan pilihan film dan anime favorit dengan koleksi yang terus diperbarui, kualitas tontonan yang nyaman, serta pengalaman streaming praktis langsung dari genggamanmu. Semua hiburan favoritmu, kini dalam satu aplikasi Android!</p>  
-    </div>  
-    <div class="vis" aria-hidden="true"><span class="ring"></span><span class="ring r2"></span><div class="mark">
-  <img src="https://files.catbox.moe/36nybt.png" alt="RapipMovies">
-</div></div>  
-  </div>    <section id="fitur">  
+<section id="fitur">
 <div class="sh rv">
   <small>FITUR UNGGULAN</small>
   <h2>Satu aplikasi, jutaan cerita untuk dijelajahi</h2>
@@ -274,71 +209,67 @@ main,footer{
 </div>
 <div class="app-showcase">
   <div class="coverflow" id="appCarousel">
-
-    <div class="cover-item active">
-      <img src="/assets/rapip-1.jpg" alt="RapipMovies Home" loading="lazy">
-    </div>
-
-    <div class="cover-item">
-      <img src="/assets/rapip-2.jpg" alt="RapipMovies Movies" loading="lazy">
-    </div>
-
-    <div class="cover-item">
-      <img src="/assets/rapip-3.jpg" alt="RapipMovies Anime" loading="lazy">
-    </div>
-
-    <div class="cover-item">
-      <img src="/assets/rapip-4.jpg" alt="RapipMovies Detail" loading="lazy">
-    </div>
-
-    <div class="cover-item">
-      <img src="/assets/rapip-5.jpg" alt="RapipMovies Player" loading="lazy">
-    </div>
-
+    <div class="cover-item active"><img src="/assets/rapip-1.jpg" alt="RapipMovies Home" loading="lazy"></div>
+    <div class="cover-item"><img src="/assets/rapip-2.jpg" alt="RapipMovies Movies" loading="lazy"></div>
+    <div class="cover-item"><img src="/assets/rapip-3.jpg" alt="RapipMovies Anime" loading="lazy"></div>
+    <div class="cover-item"><img src="/assets/rapip-4.jpg" alt="RapipMovies Detail" loading="lazy"></div>
+    <div class="cover-item"><img src="/assets/rapip-5.jpg" alt="RapipMovies Player" loading="lazy"></div>
+    <div class="cover-item"><img src="/assets/rapip-6.jpg" alt="RapipMovies Player" loading="lazy"></div>
   </div>
-
   <div class="carousel-controls">
     <button type="button" id="coverPrev" aria-label="Sebelumnya">‹</button>
-    <div class="carousel-dots" id="carouselDots">
-      <span class="active"></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
     <button type="button" id="coverNext" aria-label="Selanjutnya">›</button>
   </div>
 </div>
 <div class="grid">
   <article class="card rv">
-    <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16M3 9h5M3 15h5M16 9h5M16 15h5"/></svg></div>
-    <h3>Hiburan Tanpa Batas</h3>
-    <p>Jelajahi beragam pilihan Movies, Series, Anime, hingga K-Drama dalam satu tempat. Temukan cerita baru yang sesuai dengan seleramu.</p>
+    <div class="cimg"><img src="/assets/fitur-1.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="cb">
+      <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16M3 9h5M3 15h5M16 9h5M16 15h5"/></svg></div>
+      <h3>Hiburan Tanpa Batas</h3>
+      <p>Jelajahi beragam pilihan Movies, Series, Anime, hingga K-Drama dalam satu tempat. Temukan cerita baru yang sesuai dengan seleramu.</p>
+    </div>
   </article>
   <article class="card rv">
-    <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg></div>
-    <h3>Temukan dengan Cepat</h3>
-    <p>Tak perlu repot mencari. Gunakan fitur pencarian untuk menemukan judul, film, atau serial favoritmu dengan mudah.</p>
+    <div class="cimg"><img src="/assets/fitur-2.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="cb">
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg></div>
+      <h3>Temukan dengan Cepat</h3>
+      <p>Tak perlu repot mencari. Gunakan fitur pencarian untuk menemukan judul, film, atau serial favoritmu dengan mudah.</p>
+    </div>
   </article>
   <article class="card rv">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg></div>
-    <h3>My List</h3>
-    <p>Kumpulkan semua tontonan incaranmu dalam satu daftar pribadi. Simpan sekarang dan nikmati kapan saja.</p>
+    <div class="cimg"><img src="/assets/fitur-3.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="cb">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg></div>
+      <h3>My List</h3>
+      <p>Kumpulkan semua tontonan incaranmu dalam satu daftar pribadi. Simpan sekarang dan nikmati kapan saja.</p>
+    </div>
   </article>
   <article class="card rv">
-    <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-    <h3>Lanjutkan dari Terakhir</h3>
-    <p>Setiap cerita punya kelanjutannya. Riwayat tontonan membantumu kembali menikmati film atau episode dari posisi terakhir.</p>
+    <div class="cimg"><img src="/assets/fitur-4.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="cb">
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <h3>Lanjutkan dari Terakhir</h3>
+      <p>Setiap cerita punya kelanjutannya. Riwayat tontonan membantumu kembali menikmati film atau episode dari posisi terakhir.</p>
+    </div>
   </article>
   <article class="card rv">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></div>
-    <h3>Pengingat Tontonan</h3>
-    <p>Punya daftar tontonan yang belum sempat dinikmati? Tandai dan simpan sebagai pengingat agar tidak terlupakan.</p>
+    <div class="cimg"><img src="/assets/fitur-5.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="cb">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"/></svg></div>
+      <h3>Pengingat Tontonan</h3>
+      <p>Punya daftar tontonan yang belum sempat dinikmati? Tandai dan simpan sebagai pengingat agar tidak terlupakan.</p>
+    </div>
   </article>
   <article class="card rv">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-    <h3>Satu Akun, Data Tersimpan</h3>
-    <p>Login dengan akun RapipMovies dan sinkronkan My List serta riwayat tontonan agar koleksimu tetap tersimpan.</p>
+    <div class="cimg"><img src="/assets/fitur-6.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="cb">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <h3>Satu Akun, Data Tersimpan</h3>
+      <p>Login dengan akun RapipMovies dan sinkronkan My List serta riwayat tontonan agar koleksimu tetap tersimpan.</p>
+    </div>
   </article>
 </div>
 </section>
@@ -349,37 +280,12 @@ main,footer{
     <h2>Mulai pengalaman hiburanmu dalam hitungan menit</h2>
     <p>Instal RapipMovies di perangkat Android kamu dengan mudah. Ikuti beberapa langkah sederhana dan bersiaplah menikmati hiburan favoritmu.</p>
   </div>
-
   <ol class="steps">
-    <li class="rv">
-      <div>
-        <b>Download RapipMovies</b>
-        <span>Tekan tombol Download RapipMovies yang tersedia di bagian atas halaman ini.</span>
-      </div>
-    </li>
-
-    <li class="rv">
-      <div>
-        <b>Tunggu hingga unduhan selesai</b>
-        <span>File instalasi RapipMovies.apk akan tersimpan secara otomatis di perangkat Android kamu.</span>
-      </div>
-    </li>
-
-    <li class="rv">
-      <div>
-        <b>Buka file APK</b>
-        <span>Temukan file yang sudah diunduh melalui notifikasi atau folder Download di File Manager.</span>
-      </div>
-    </li>
-
-    <li class="rv">
-      <div>
-        <b>Instal dan mulai menonton</b>
-        <span>Ikuti petunjuk instalasi Android. Setelah selesai, buka RapipMovies dan jelajahi berbagai hiburan favoritmu!</span>
-      </div>
-    </li>
+    <li class="rv"><div><b>Download RapipMovies</b><span>Tekan tombol Download RapipMovies yang tersedia di bagian atas halaman ini.</span></div></li>
+    <li class="rv"><div><b>Tunggu hingga unduhan selesai</b><span>File instalasi RapipMovies.apk akan tersimpan secara otomatis di perangkat Android kamu.</span></div></li>
+    <li class="rv"><div><b>Buka file APK</b><span>Temukan file yang sudah diunduh melalui notifikasi atau folder Download di File Manager.</span></div></li>
+    <li class="rv"><div><b>Instal dan mulai menonton</b><span>Ikuti petunjuk instalasi Android. Setelah selesai, buka RapipMovies dan jelajahi berbagai hiburan favoritmu!</span></div></li>
   </ol>
-
   <p class="note rv">Catatan: Jika Android meminta izin instalasi, aktifkan izin untuk sumber yang digunakan melalui pengaturan perangkat. Pastikan file APK berasal dari website resmi RapipMovies.</p>
 </section>
 
@@ -389,7 +295,6 @@ main,footer{
     <h2>Selalu berkembang untuk pengalaman yang lebih baik</h2>
     <p>Nikmati berbagai peningkatan dan pembaruan yang kami hadirkan untuk membuat pengalaman menggunakan RapipMovies semakin nyaman.</p>
   </div>
-
   <div class="tl rv">
     <span class="v">v<b id="uVer">1.0.0</b></span>
     <p>Versi terbaru RapipMovies untuk Android. Unduh pembaruan melalui website resmi untuk mendapatkan versi aplikasi terkini beserta peningkatan yang tersedia.</p>
@@ -402,307 +307,200 @@ main,footer{
     <h2>Semua hiburan favoritmu, ada di sini.</h2>
     <p>Tunggu apa lagi? Download RapipMovies sekarang dan temukan pengalaman hiburan yang lebih praktis langsung dari ponsel Android kamu.</p>
   </div>
-
   <div class="dlc rv">
     <div>
       <h3>RapipMovies <span id="dVer">1.0.0</span></h3>
       <p>Android · <span id="dSz">—</span></p>
     </div>
-
     <a class="btn pri" id="dl2" href="/downloads/RapipMovies.apk" download="RapipMovies.apk">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/>
-      </svg>
+      <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
       Download RapipMovies
     </a>
   </div>
 </section>
-  </section>    <section id="faq">  
-    <div class="sh rv"><small>FAQ</small><h2>Pertanyaan yang sering diajukan</h2></div>  
-    <div class="faq rv">  
-      <details><summary>Apakah file ini resmi?</summary><p>Ya. File APK disajikan langsung dari domain official website ini, bukan lewat tautan perantara.</p></details>  
-      <details><summary>Kenapa Android meminta izin saat instalasi?</summary><p>APK dipasang di luar Play Store, jadi Android meminta izin “Izinkan dari sumber ini” untuk browser atau aplikasi File yang kamu pakai. Aktifkan hanya untuk instalasi ini.</p></details>  
-      <details><summary>Bagaimana cara memperbarui aplikasi?</summary><p>Unduh APK terbaru dari halaman ini, lalu pasang seperti biasa.</p></details>  
-      <details><summary>Apakah saya perlu akun?</summary><p>RapipMovies memakai akun. Kamu bisa mendaftar langsung dari layar masuk, dan My List serta riwayat tontonan akan tersimpan di akunmu.</p></details>  
-      <details><summary>Bisa menonton lewat web?</summary><p>Bisa. Tekan “Tonton di web” di bagian atas halaman ini.</p></details>  
-    </div>  
-  </section>  
-</main>  <footer><div class="wrap">Dibuat dengan ❤ oleh RapipMovies · © 2026 · Official Website</div></footer>  <script>  
-/* 3D COVERFLOW CAROUSEL */
+
+<section id="faq">
+  <div class="sh rv"><small>FAQ</small><h2>Pertanyaan yang sering diajukan</h2></div>
+  <div class="faq rv">
+    <details><summary>Apakah file ini resmi?</summary><p>Ya. File APK disajikan langsung dari domain official website ini, bukan lewat tautan perantara.</p></details>
+    <details><summary>Kenapa Android meminta izin saat instalasi?</summary><p>APK dipasang di luar Play Store, jadi Android meminta izin “Izinkan dari sumber ini” untuk browser atau aplikasi File yang kamu pakai. Aktifkan hanya untuk instalasi ini.</p></details>
+    <details><summary>Bagaimana cara memperbarui aplikasi?</summary><p>Unduh APK terbaru dari halaman ini, lalu pasang seperti biasa.</p></details>
+    <details><summary>Apakah saya perlu akun?</summary><p>RapipMovies memakai akun. Kamu bisa mendaftar langsung dari layar masuk, dan My List serta riwayat tontonan akan tersimpan di akunmu.</p></details>
+    <details><summary>Bisa menonton lewat web?</summary><p>Bisa. Tekan “Tonton di web” di bagian atas halaman ini.</p></details>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">Dibuat dengan ❤ oleh RapipMovies · © 2026 · Official Website</div></footer>
+
+<script>
+"use strict";
+/* ===== LOGO INTRO: "RapipMovies!!" ===== */
 (function(){
-  const carousel = document.getElementById("appCarousel");
-  if(!carousel) return;
+  var vis=document.getElementById("vis"),vt=document.getElementById("vt");
+  var txt="RapipMovies!!",html="";
+  for(var i=0;i<txt.length;i++){
+    var c=txt[i],cls=i>=5&&i<11?"m":(i>=11?"x":"");
+    html+='<span class="'+cls+'" style="--i:'+i+'">'+c+'</span>';
+  }
+  vt.innerHTML=html;
+  function play(){vis.classList.remove("go");void vis.offsetWidth;vis.classList.add("go")}
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          var loaded=document.getElementById("ld").classList.contains("off");
+          setTimeout(play,loaded?0:900);
+        }else vis.classList.remove("go");
+      });
+    },{threshold:.55}).observe(vis);
+  }else play();
+  vis.addEventListener("click",play);
+})();
 
-  const items = Array.from(carousel.querySelectorAll(".cover-item"));
-  const dots = document.querySelectorAll("#carouselDots span");
-  const prev = document.getElementById("coverPrev");
-  const next = document.getElementById("coverNext");
+/* ===== JELLY / KENYAL TOUCH ===== */
+(function(){
+  var SEL=".btn,.card,.steps li,.tl,.dlc,.faq details,.tag,.note,.carousel-controls button,.logo,.vis .mark,.cover-item,.meta span,.sh small";
+  var cur=null;
+  function k(el){return el.offsetWidth>240?.45:1}
+  document.addEventListener("pointerdown",function(e){
+    var el=e.target.closest&&e.target.closest(SEL);
+    if(!el||!el.animate)return;
+    if(el._a)el._a.cancel();
+    cur=el;var q=k(el);
+    el._ps=(1-.07*q)+" "+(1-.04*q);
+    el._a=el.animate([{scale:"1 1"},{scale:el._ps}],{duration:160,easing:"cubic-bezier(.2,.8,.3,1)",fill:"forwards"});
+  },{passive:true});
+  function rel(){
+    var el=cur;cur=null;
+    if(!el||!el._a)return;
+    el._a.cancel();var q=k(el);
+    el._a=el.animate([
+      {scale:el._ps},
+      {scale:(1+.09*q)+" "+(1-.08*q),offset:.25},
+      {scale:(1-.06*q)+" "+(1+.06*q),offset:.48},
+      {scale:(1+.03*q)+" "+(1-.025*q),offset:.7},
+      {scale:(1-.01*q)+" "+(1+.01*q),offset:.86},
+      {scale:"1 1"}
+    ],{duration:780,easing:"cubic-bezier(.3,.5,.4,1)"});
+  }
+  document.addEventListener("pointerup",rel,{passive:true});
+  document.addEventListener("pointercancel",rel,{passive:true});
+})();
 
-  if(!items.length) return;
-
-  let active = 0;
-  let startX = 0;
-  let dragging = false;
-
+/* ===== 3D COVERFLOW (drag + spring) ===== */
+(function(){
+  var car=document.getElementById("appCarousel");if(!car)return;
+  var items=[].slice.call(car.querySelectorAll(".cover-item")),total=items.length;if(!total)return;
+  var dotsBox=document.getElementById("carouselDots"),dots=[];
+  items.forEach(function(_,i){var s=document.createElement("span");s.addEventListener("click",function(){goTo(i)});dotsBox.appendChild(s);dots.push(s)});
+  var pos=0,target=0,vel=0,raf=0,drag=false,moved=false,sx=0,sp=0,lx=0,fv=0;
+  var mod=function(a,n){return((a%n)+n)%n};
   function render(){
-    const total = items.length;
-
-    items.forEach((item,i)=>{
-      let offset = i-active;
-
-      if(offset > total/2) offset -= total;
-      if(offset < -total/2) offset += total;
-
-      const abs = Math.abs(offset);
-      const x = offset * 125;
-      const rotate = offset * -28;
-      const scale = Math.max(.68,1-abs*.13);
-      const opacity = abs > 2 ? 0 : 1-abs*.22;
-
-      item.style.transform =
-        `translate(-50%,-50%) translateX(${x}px) rotateY(${rotate}deg) scale(${scale})`;
-
-      item.style.opacity = opacity;
-      item.style.zIndex = 10-abs;
-      item.style.filter = abs > 0 ? "brightness(.65)" : "brightness(1)";
-      item.style.pointerEvents = abs > 1 ? "none" : "auto";
-
-      item.classList.toggle("active",offset===0);
+    items.forEach(function(it,i){
+      var o=mod(i-pos+total/2,total)-total/2,a=Math.abs(o);
+      var x=o*(innerWidth<640?100:122),ry=Math.max(-62,Math.min(62,o*-34)),s=Math.max(.55,1-a*.14),z=-a*70;
+      it.style.transform="translate(-50%,-50%) translate3d("+x+"px,0,"+z+"px) rotateY("+ry+"deg) scale("+s+")";
+      it.style.opacity=Math.max(0,1-Math.max(0,a-1.2)*.75);
+      it.style.zIndex=Math.round(100-a*10);
+      it.style.setProperty("--d",Math.min(.6,a*.3).toFixed(2));
+      it.style.pointerEvents=a>1.6?"none":"auto";
     });
-
-    dots.forEach((dot,i)=>{
-      dot.classList.toggle("active",i===active);
-    });
+    var idx=mod(Math.round(pos),total);
+    items.forEach(function(it,i){it.classList.toggle("active",i===idx)});
+    dots.forEach(function(d,i){d.classList.toggle("active",i===idx)});
   }
-
-  function goTo(index){
-    active = (index+items.length)%items.length;
-    render();
+  function tick(){
+    vel+=(target-pos)*.085;vel*=.8;pos+=vel;render();
+    if(Math.abs(target-pos)<.0005&&Math.abs(vel)<.0005){pos=target;vel=0;render();raf=0;return}
+    raf=requestAnimationFrame(tick);
   }
-
-  prev.addEventListener("click",()=>goTo(active-1));
-  next.addEventListener("click",()=>goTo(active+1));
-
-  items.forEach((item,i)=>{
-    item.addEventListener("click",()=>goTo(i));
+  function kick(){if(!raf)raf=requestAnimationFrame(tick)}
+  function goTo(i){var b=Math.round(target);target=b+(mod(i-b+total/2,total)-total/2);kick()}
+  document.getElementById("coverPrev").addEventListener("click",function(){target=Math.round(target)-1;kick()});
+  document.getElementById("coverNext").addEventListener("click",function(){target=Math.round(target)+1;kick()});
+  items.forEach(function(it,i){it.addEventListener("click",function(){if(!moved)goTo(i)})});
+  car.addEventListener("pointerdown",function(e){
+    drag=true;moved=false;sx=lx=e.clientX;sp=pos;fv=0;vel=0;
+    if(raf){cancelAnimationFrame(raf);raf=0}
+    target=pos;
   });
-
-  carousel.addEventListener("pointerdown",e=>{
-    startX = e.clientX;
-    dragging = true;
-  });
-
-  window.addEventListener("pointerup",e=>{
-    if(!dragging) return;
-    const distance = e.clientX-startX;
-
-    if(Math.abs(distance)>35){
-      goTo(active+(distance<0?1:-1));
-    }
-
-    dragging = false;
-  });
-
+  window.addEventListener("pointermove",function(e){
+    if(!drag)return;
+    var dx=e.clientX-sx;if(Math.abs(dx)>6)moved=true;
+    var np=sp-dx/105;fv=fv*.6+(np-pos)*.4;pos=np;lx=e.clientX;render();
+  },{passive:true});
+  function end(){
+    if(!drag)return;drag=false;
+    var b=Math.round(pos),f=Math.max(-2,Math.min(2,Math.round(fv*7)));
+    target=b+f;kick();
+  }
+  window.addEventListener("pointerup",end);
+  window.addEventListener("pointercancel",end);
   render();
 })();
-/* PREMIUM INTERACTIVE METEOR PARTICLES */
+
+/* ===== METEOR BACKGROUND (tanpa ledakan) ===== */
 (function(){
-  const canvas = document.getElementById("meteor-bg");
-  const ctx = canvas.getContext("2d", {alpha:true});
-
-  if(!ctx) return;
-
-  let w = 0;
-  let h = 0;
-  let dpr = 1;
-  let particles = [];
-  let ripples = [];
-  let animation;
-
-  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const COUNT = reduced ? 12 : 30;
-
-  function resize(){
-    dpr = Math.min(devicePixelRatio || 1, 1.5);
-    w = innerWidth;
-    h = innerHeight;
-
-    canvas.width = Math.round(w * dpr);
-    canvas.height = Math.round(h * dpr);
-
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-  }
-
-  function createMeteor(initial){
-    return {
-      x: Math.random() * w,
-      y: initial ? Math.random() * h : -30,
-      vx: 1.2 + Math.random() * 2.2,
-      vy: 0.7 + Math.random() * 1.5,
-      length: 15 + Math.random() * 45,
-      alpha: 0.25 + Math.random() * 0.55,
-      size: 0.5 + Math.random() * 1.1
-    };
-  }
-
-  function init(){
-    resize();
-    particles = Array.from(
-      {length:COUNT},
-      () => createMeteor(true)
-    );
-  }
-
-  function interact(x,y){
-  // Gelombang sentuhan
-  ripples.push({
-    x:x,
-    y:y,
-    radius:0,
-    alpha:0.9
-  });
-
-  // Particle burst
-  const amount = 32;
-
-  for(let i=0;i<amount;i++){
-    const angle = Math.random()*Math.PI*2;
-    const speed = 1.5 + Math.random()*4;
-
-    particles.push({
-      x:x,
-      y:y,
-      vx:Math.cos(angle)*speed,
-      vy:Math.sin(angle)*speed,
-      length:5 + Math.random()*15,
-      alpha:0.9,
-      size:0.8 + Math.random()*1.5,
-      burst:true,
-      life:1
-    });
-  }
-}
-  window.addEventListener("pointerdown",e=>{
-    interact(e.clientX,e.clientY);
-  },{passive:true});
-
+  var canvas=document.getElementById("meteor-bg"),ctx=canvas.getContext("2d",{alpha:true});
+  if(!ctx)return;
+  var w=0,h=0,dpr=1,ps=[],anim;
+  var COUNT=matchMedia("(prefers-reduced-motion: reduce)").matches?12:30;
+  function resize(){dpr=Math.min(devicePixelRatio||1,1.5);w=innerWidth;h=innerHeight;canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(init){return{x:Math.random()*w,y:init?Math.random()*h:-30,vx:1.2+Math.random()*2.2,vy:.7+Math.random()*1.5,length:15+Math.random()*45,alpha:.25+Math.random()*.55,size:.5+Math.random()*1.1}}
   function draw(){
     ctx.clearRect(0,0,w,h);
-
-    particles.forEach((p,i)=>{
-  p.x += p.vx;
-  p.y += p.vy;
-
-  if(p.burst){
-    p.life -= 0.025;
-    p.alpha = p.life;
-    p.vx *= 0.96;
-    p.vy *= 0.96;
-
-    if(p.life <= 0){
-      particles.splice(i,1);
-      return;
-    }
+    ps.forEach(function(p,i){
+      p.x+=p.vx;p.y+=p.vy;
+      ctx.beginPath();ctx.moveTo(p.x-p.vx*p.length,p.y-p.vy*p.length);ctx.lineTo(p.x,p.y);
+      ctx.strokeStyle="rgba(255,55,65,"+p.alpha+")";ctx.lineWidth=p.size;ctx.stroke();
+      if(p.x>w+100||p.y>h+100)ps[i]=mk(false);
+    });
+    anim=requestAnimationFrame(draw);
   }
+  document.addEventListener("visibilitychange",function(){cancelAnimationFrame(anim);if(!document.hidden)anim=requestAnimationFrame(draw)});
+  addEventListener("resize",resize,{passive:true});
+  resize();ps=Array.from({length:COUNT},function(){return mk(true)});
+  anim=requestAnimationFrame(draw);
+})();
 
-  const tailX = p.x-p.vx*p.length;
-  const tailY = p.y-p.vy*p.length;
+/* ===== APP CONFIG ===== */
+var APP_CONFIG={appName:"RapipMovies",version:"1.0.0",downloadUrl:"/downloads/RapipMovies.apk",fileName:"RapipMovies.apk",platform:"Android"};
+var $=function(id){return document.getElementById(id)};
+var st=$("st"),links=[$("dl"),$("dl2")];
+$("mVer").textContent=$("uVer").textContent=$("dVer").textContent=APP_CONFIG.version;
+$("mPl").textContent=APP_CONFIG.platform;
+links.forEach(function(a){a.setAttribute("href",APP_CONFIG.downloadUrl);a.setAttribute("download",APP_CONFIG.fileName)});
 
-  ctx.beginPath();
-  ctx.moveTo(tailX,tailY);
-  ctx.lineTo(p.x,p.y);
+function ready(){setTimeout(function(){$("ld").classList.add("off")},350)}
+if(document.readyState==="complete")ready();else addEventListener("load",ready);
 
-  ctx.strokeStyle = p.burst
-    ? `rgba(255,${Math.floor(100+Math.random()*155)},${Math.floor(100+Math.random()*155)},${p.alpha})`
-    : `rgba(255,55,65,${p.alpha})`;
+function onScroll(){$("hd").classList.toggle("sc",scrollY>8)}
+addEventListener("scroll",onScroll,{passive:true});onScroll();
 
-  ctx.lineWidth = p.size;
-  ctx.stroke();
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+}else document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")});
 
-  if(!p.burst && (p.x>w+100 || p.y>h+100)){
-    particles[i] = createMeteor(false);
-  }
+function setDisabled(d){links.forEach(function(a){a.setAttribute("aria-disabled",d?"true":"false")})}
+function fmt(b){return b>=1048576?(b/1048576).toFixed(1)+" MB":Math.max(1,Math.round(b/1024))+" KB"}
+fetch(APP_CONFIG.downloadUrl,{method:"HEAD",cache:"no-store"}).then(function(r){
+  var type=r.headers.get("content-type")||"",len=+r.headers.get("content-length")||0;
+  if(!r.ok||/text\/html/i.test(type))throw new Error("missing");
+  if(len)$("mSz").textContent=$("dSz").textContent=fmt(len);
+}).catch(function(e){
+  if(e&&e.message==="missing"){setDisabled(true);st.className="err";st.textContent="File APK belum tersedia di server. Coba lagi nanti."}
 });
 
-    ripples = ripples.filter(r=>r.alpha>0.02);
-
-    ripples.forEach(r=>{
-      r.radius += 2.2;
-      r.alpha *= 0.94;
-
-      ctx.beginPath();
-      ctx.arc(r.x,r.y,r.radius,0,Math.PI*2);
-      ctx.strokeStyle = `rgba(229,9,20,${r.alpha})`;
-      ctx.lineWidth = 1.3;
-      ctx.stroke();
-
-      ctx.beginPath();
-      ctx.arc(r.x,r.y,r.radius*.55,0,Math.PI*2);
-      ctx.strokeStyle = `rgba(255,255,255,${r.alpha*.3})`;
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    });
-
-    animation = requestAnimationFrame(draw);
-  }
-
-  document.addEventListener("visibilitychange",()=>{
-    if(document.hidden){
-      cancelAnimationFrame(animation);
-    }else{
-      cancelAnimationFrame(animation);
-      animation = requestAnimationFrame(draw);
-    }
+links.forEach(function(a){
+  a.addEventListener("click",function(){
+    if(a.getAttribute("aria-disabled")==="true")return;
+    var t=a.querySelector("#dlt");
+    a.classList.add("busy");if(t)t.textContent="Menyiapkan unduhan…";
+    st.className="";st.textContent="Unduhan dimulai. Cek notifikasi atau folder Download di perangkatmu.";
+    setTimeout(function(){a.classList.remove("busy");if(t)t.textContent="Download RapipMovies"},2600);
   });
-
-  window.addEventListener("resize",resize,{passive:true});
-
-  init();
-  animation = requestAnimationFrame(draw);
-})();
-"use strict";  
-var APP_CONFIG = { appName: "RapipMovies", version: "1.0.0", downloadUrl: "/downloads/RapipMovies.apk", fileName: "RapipMovies.apk", platform: "Android" };  
-var $ = function (id) { return document.getElementById(id); };  
-var st = $("st"), links = [$("dl"), $("dl2")];  
-  
-$("mVer").textContent = $("uVer").textContent = $("dVer").textContent = APP_CONFIG.version;  
-$("mPl").textContent = APP_CONFIG.platform;  
-links.forEach(function (a) { a.setAttribute("href", APP_CONFIG.downloadUrl); a.setAttribute("download", APP_CONFIG.fileName); });  
-  
-function ready() { setTimeout(function () { $("ld").classList.add("off"); }, 350); }  
-if (document.readyState === "complete") ready(); else addEventListener("load", ready);  
-  
-function onScroll() { $("hd").classList.toggle("sc", scrollY > 8); }  
-addEventListener("scroll", onScroll, { passive: true }); onScroll();  
-  
-if ("IntersectionObserver" in window) {  
-  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: .12 });  
-  document.querySelectorAll(".rv").forEach(function (el) { io.observe(el); });  
-} else document.querySelectorAll(".rv").forEach(function (el) { el.classList.add("in"); });  
-  
-/* cek file APK: ukuran asli dari server; kalau belum diunggah tampilkan pesan (bukan unduhan palsu) */  
-function setDisabled(d) { links.forEach(function (a) { a.setAttribute("aria-disabled", d ? "true" : "false"); }); }  
-function fmt(b) { return b >= 1048576 ? (b / 1048576).toFixed(1) + " MB" : Math.max(1, Math.round(b / 1024)) + " KB"; }  
-fetch(APP_CONFIG.downloadUrl, { method: "HEAD", cache: "no-store" }).then(function (r) {  
-  var type = r.headers.get("content-type") || "", len = +r.headers.get("content-length") || 0;  
-  if (!r.ok || /text\/html/i.test(type)) throw new Error("missing");  
-  if (len) $("mSz").textContent = $("dSz").textContent = fmt(len);  
-}).catch(function (e) {  
-  if (e && e.message === "missing") {  
-    setDisabled(true);  
-    st.className = "err"; st.textContent = "File APK belum tersedia di server. Coba lagi nanti.";  
-  }  
-});  
-  
-/* unduhan dijalankan browser lewat link asli; JS hanya memberi status */  
-links.forEach(function (a) {  
-  a.addEventListener("click", function () {  
-    if (a.getAttribute("aria-disabled") === "true") return;  
-    var t = a.querySelector("#dlt");  
-    a.classList.add("busy"); if (t) t.textContent = "Menyiapkan unduhan…";  
-    st.className = ""; st.textContent = "Unduhan dimulai. Cek notifikasi atau folder Download di perangkatmu.";  
-    setTimeout(function () { a.classList.remove("busy"); if (t) t.textContent = "Download RapipMovies"; }, 2600);  
-  });  
-});  
-</script>  </body>  
-</html>  
+});
+</script>
+</body>
+</html>
